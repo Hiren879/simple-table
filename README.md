@@ -8,8 +8,8 @@ Because it should be very simple to create simple tables in Java.
   
     public static void main(String[] args) {
         SimpleTable table = new SimpleTable();
-        table.addRow("1", 2);
-        table.addRow("Three", 4, '5');
+        table.addRow(new Row("1", 2));
+        table.addRow(new Row("Three", 4, '5'));
         
         System.out.println(table);
         // +-------+---+---+

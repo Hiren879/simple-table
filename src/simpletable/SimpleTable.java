@@ -44,7 +44,7 @@ public class SimpleTable {
 
     /**
      * Adds a row of varargs objects to the table.
-     * @param objects The objects to be added.
+     * @param row The row to be added.
      */
     public void addRow(Row row) {
         rows.add(row);
@@ -69,10 +69,11 @@ public class SimpleTable {
 
 
     /**
-     * Builds the row's border according to <code>sizes</code>.
+     * Builds the given row border according to <code>sizes</code>.
      * 
      * @param    sizes Array of column's sizes.
-     * @return    A string that represents the row's border.
+     * @param    row   The row we want to get its border.
+     * @return   A string that represents the row's border.
      */
     private String getBorder(int[] sizes, Row row) {
         StringBuilder sb = new StringBuilder();
@@ -104,7 +105,7 @@ public class SimpleTable {
         for (Row row : this.rows) {    
             for (int i = 0; i < row.getRowContent().size(); i++) {
                 int cellSize = row.getRowContent().get(i).toString().length();
-                if ( cellSize > res[i]) {
+                if (cellSize > res[i]) {
                     res[i] = cellSize;
                 }
             }
