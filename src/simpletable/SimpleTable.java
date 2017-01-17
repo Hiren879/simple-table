@@ -2,6 +2,7 @@ package simpletable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class SimpleTable {
@@ -118,14 +119,10 @@ public class SimpleTable {
      * @return The longest row size in the table.
      */
     private int getLongestRowSize() {
-        int max = 0;
-        for (Row row : this.rows) {
-            int current = row.getRowContent().size();
-            if (current > max) {
-                max = current;
-            }
-        }
-        return max;
+      return this.rows.stream()
+            .max(Comparator.comparing(Row::size))
+            .get()
+            .getRowContent().size();
     }
 
 

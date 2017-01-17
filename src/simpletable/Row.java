@@ -62,4 +62,9 @@ public class Row {
         this.title = true;
         return this;
     }
+    
+    public int size() {
+    	return row.size();
+    }
+
 }
