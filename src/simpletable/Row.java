@@ -9,10 +9,10 @@ import java.util.List;
 public class Row {
     
     // default decoration
-    private String rowSeparator = "-";
-    private String titleRowSeparator = "=";    
-    private String columnSeparator = "|";
-    private String corner = "+";
+    private char rowSeparator = '-';
+    private char titleRowSeparator = '=';    
+    private char columnSeparator = '|';
+    private char corner = '+';
     
     private boolean title = false;
     
@@ -27,29 +27,29 @@ public class Row {
     
     // mutators //
     
-    public String getRowSeparator() {
+    public char getRowSeparator() {
         return title ? titleRowSeparator : rowSeparator;
     }
     
-    public Row setRowSeparator(String rowSeparator) {
+    public Row setRowSeparator(char rowSeparator) {
         this.rowSeparator = rowSeparator;
         return this;
     }
     
-    public String getColumnSeparator() {
+    public char getColumnSeparator() {
         return columnSeparator;
     }
     
-    public Row setColumnSeparator(String columnSeparator) {
+    public Row setColumnSeparator(char columnSeparator) {
         this.columnSeparator = columnSeparator;
         return this;
     }
     
-    public String getCorner() {
+    public char getCorner() {
         return corner;
     }
     
-    public Row setCorner(String corner) {
+    public Row setCorner(char corner) {
         this.corner = corner;
         return this;
     }
