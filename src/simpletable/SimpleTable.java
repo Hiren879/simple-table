@@ -46,8 +46,9 @@ public class SimpleTable {
      * Adds a row of varargs objects to the table.
      * @param row The row to be added.
      */
-    public void addRow(Row row) {
-        rows.add(row);
+    public void addRows(Row... rows) {
+        for (Row row: rows)
+            this.rows.add(row);
     }
 
 
